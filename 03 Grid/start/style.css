@@ -14,10 +14,14 @@ main {
   grid-template-rows: 0.8fr 1fr 4fr;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 3px 3px 5px 0px rgba(219, 214, 214, 0.75);
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(219, 214, 214, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(219, 214, 214, 0.75);
 }
 .row-operations {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid grey;
 }
 .row-operations .row-operation {
   display: grid;
@@ -50,6 +54,13 @@ main {
   align-content: center;
   justify-content: center;
 }
+.row-numbers .row-number:not(:last-child) {
+  border-right: 1px solid gray;
+}
+.row-numbers .row-number[name='num-pad'] {
+  border-bottom: 1px solid gray;
+}
+
 .equal-sign {
   grid-column: 4;
   grid-row: 1/5;
