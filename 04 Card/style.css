@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', cursive;
+}
+
+section[name='card'] {
+  width: 411px;
+  height: auto;
+  border-radius: 7px;
+  border: 1.2px solid lightgray;
+}
+
+.card-pic-img {
+  border-radius: 7px 7px 0 0;
+  width: 100%;
+  max-width: 411px;
+  max-height: 250px;
+  height: auto;
+  object-fit: cover;
+}
+.card-body-desc p {
+  border-bottom: 1px solid gray;
+}
+.card-body-desc p {
+  padding: 15px;
+}
+.card-body-title {
+  border-bottom: 1px solid gray;
+  padding: 15px;
+}
+
+.card-body-links {
+  padding: 15px;
+  display: flex;
+}
+.card-body-links li:last-child {
+  margin-left: 10px;
+}
+.card-body-links li a {
+  text-decoration: underline;
+}
