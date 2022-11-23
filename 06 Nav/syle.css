@@ -1,0 +1,103 @@
+* {
+  --nav-bar-bg: #212529;
+  --search-btn-color: #1a8452;
+}
+
+nav {
+  background-color: var(--nav-bar-bg);
+  font-family: 'Roboto', cursive;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+  align-items: center;
+  color: white;
+  user-select: none;
+}
+
+nav .nav-left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.nav-left h3 {
+  font-weight: 500;
+}
+.nav-left ul {
+  display: flex;
+  align-items: center;
+}
+.nav-left ul li a {
+  color: white;
+}
+.nav-left ul li a.darklight {
+  color: lightgray;
+}
+.nav-left select {
+  background: var(--nav-bar-bg);
+  border: none;
+  color: lightgray;
+  margin-left: -5px;
+}
+.nav-left ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+nav > ul > li:not(:last-child) {
+  margin-right: 15px;
+}
+.darklight {
+  color: lightgray;
+}
+
+.nav-right input,
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: gray;
+}
+.nav-right button {
+  color: var(--search-btn-color);
+  background: transparent;
+  border: 1px solid var(--search-btn-color);
+  margin-left: 5px;
+  transition: all 0.3s;
+}
+.nav-right button:hover {
+  background-color: var(--search-btn-color);
+  color: white;
+  cursor: pointer;
+}
+
+/*Responsive*/
+
+@media screen and (min-width: 769px) {
+  .nav-right > img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-right > img {
+    display: block;
+    max-width: 50px;
+  }
+  .nav-right input,
+  button {
+    display: none;
+  }
+  .nav-left ul {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-right {
+    padding-right: 15px;
+  }
+  .nav-left {
+    padding-left: 15px;
+  }
+}
