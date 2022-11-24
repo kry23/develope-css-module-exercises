@@ -1,0 +1,148 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Poppins', cursive;
+  font-size: 1.2rem;
+  user-select: none;
+  --shadow-color: 0deg 0% 63%;
+  --shadow-elevation-medium: 0px 0.3px 0.3px hsl(var(--shadow-color) / 0.36),
+    -0.1px 0.9px 1px -0.8px hsl(var(--shadow-color) / 0.36),
+    -0.3px 2.3px 2.6px -1.7px hsl(var(--shadow-color) / 0.36),
+    -0.8px 5.6px 6.4px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-gap: 15px;
+  padding: 15px;
+  justify-content: center;
+}
+.card {
+  display: inline-block;
+  width: 200px;
+  background: rgb(213, 213, 213);
+  background: rgb(213, 213, 213);
+  background: linear-gradient(
+    180deg,
+    rgba(213, 213, 213, 1) 15%,
+    rgba(240, 240, 240, 1) 97%
+  );
+  border-radius: 15px;
+  box-shadow: var(--shadow-elevation-medium);
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5px 5px 0 4px;
+}
+.card-top-left {
+  display: flex;
+  align-items: start;
+}
+.card-top-left__avatar::before {
+  content: '';
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+.card-top-left__username {
+  margin-left: 5px;
+}
+.card-top-left__username p:first-child {
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.card-img img {
+  cursor: pointer;
+}
+
+.card-top-left__username p:first-child:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(122, 122, 122);
+}
+
+.card-top-right i {
+  padding-right: 3px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.card-top-right i:hover {
+  color: white;
+}
+.card-top-left__username .name {
+  font-size: 1rem;
+}
+
+.card-top-left__username .date {
+  color: rgba(245, 245, 245, 0.952);
+  font-size: 0.75rem;
+}
+.card-bottom {
+  font-size: 1.2rem;
+  padding: 3.5px 5px 0 4px;
+}
+.card-bottom-icons {
+  margin-left: 12px;
+  padding: 6px 0;
+}
+.card-bottom-icons .fa-comment {
+  margin-left: 6px;
+  cursor: pointer;
+}
+.card-bottom-icons .fa-heart {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.card-bottom-icons .fa-comment:hover {
+  color: white;
+  transition: color 0.3s;
+}
+.card-bottom-icons .fa-heart:hover {
+  color: white;
+}
+.card-bottom-desc {
+  font-size: 0.7rem;
+  text-align: justify;
+  padding: 0 5px 23px 5px;
+}
+.card-bottom-desc p {
+  user-select: text;
+  font-weight: 500;
+}
+
+.card-bottom-desc p > span.bold-text {
+  font-weight: 700;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .card-container {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    grid-template-columns: repeat(1, 200px);
+    justify-content: center;
+  }
+}
